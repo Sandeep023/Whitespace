@@ -35,10 +35,17 @@ C 	:	C space space tab number 		{stack_operations($5, 0);/*printf("%d", $5);push
 	|	C space linefeed tab 			{stack_operations(0, 2);/*printf("Swap");swap top two*/}
 	|	C space linefeed linefeed		{int top = stack_operations(0, 3);printf("top %d", top);/*top*/}
 	|	C space tab space number		{stack_operations($5, 4);/*printf("Copy nth");copy nth element to pop*/}
+<<<<<<< HEAD
 	|	C space tab tab number 			{stack_operations($5, 5);/*printf("Print in stright");Print in stright*/}
 	|	C space tab linefeed number		{stack_operations($5, 6);/*printf("Print in reverse\n");Print in stright*/}
 	|	C tab space number				{arthematic($4);/*printf("arthematic %d", $4);*/}
 	|	C tab linefeed number			{/*printf("input");*/input_output($4);} 
+=======
+	|	C space tab tab number			{stack_operations($5, 5);/*printf("Print in stright");Print in stright*/}
+	|	C space tab linefeed number		{stack_operations($5, 6);/*printf("Print in reverse\n");Print in stright*/}
+	|	C tab space number				{arthematic($4);/*printf("arthematic %d", $4);*/}
+	|	C tab linefeed number			{/*printf("input");*/input_output($4);}
+>>>>>>> 3547f939826af7281bdc24c48461804a5f620cba
 	|	C exit_command					{/*print_all_commands();*/exit(EXIT_SUCCESS);}
 	|	C space							{}
 	|	C tab 							{}
@@ -227,9 +234,13 @@ int stack_operations(int c, int operation){
 
 int main (void) {
 	/* init symbol table */
+<<<<<<< HEAD
 	//yyin = fopen("arthemtic.ws", "r");
 	//yyin = fopen("helloworld.ws", "r");
 	yyin = fopen("basic.ws", "r");
+=======
+	yyin = fopen("addition.ws", "r");
+>>>>>>> 3547f939826af7281bdc24c48461804a5f620cba
 	return yyparse ( );
 }
 
