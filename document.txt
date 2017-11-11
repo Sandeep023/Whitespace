@@ -1,0 +1,56 @@
+for(int i=0; i<strlen(string); i++){
+	if(string[i] == ' ')
+		printf("s ");
+	else if(string[i] == '\t')
+		printf("t ");
+	else if(string[i] == '\n')
+		printf("lf ");
+}
+
+
+
+{charec}*{tab}{charec}*{lf}{charec}*{space}{charec}*{tab}{charec}*	seperate_text(yytext, 6);
+{charec}*{tab}{charec}*{lf}{charec}*{tab}{charec}*{space}{charec}*	seperate_text(yytext, 7);
+{charec}*{tab}{charec}*{lf}{charec}*{tab}{charec}*{tab}{charec}*	seperate_text(yytext, 8);
+
+
+{charec}*{tab}{charec}*{space}{charec}*{space}{charec}*{tab}{charec}*	seperate_text(yytext, 10);
+{charec}*{tab}{charec}*{space}{charec}*{space}{charec}*{lf}{charec}*	seperate_text(yytext, 11);
+{charec}*{tab}{charec}*{space}{charec}*{tab}{charec}*{space}{charec}*	seperate_text(yytext, 12);
+{charec}*{tab}{charec}*{space}{charec}*{tab}{charec}*{tab}{charec}*	seperate_text(yytext, 13);
+
+
+
+
+case(6):
+	output_top(0);
+	break;
+case(7):
+	input_console(1);
+	break;
+case(8):
+	input_console(0);
+	break;
+
+case(10):
+	arthematic(arth);
+	break;
+case(11):
+	arthematic(arth);
+	break;
+case(12):
+	arthematic(arth);
+	break;
+case(13):
+	arthematic(arth);
+	break;
+
+
+
+Tutorial:
+
+https://h0tsh0tt.wordpress.com/2016/07/03/whitespace-language-tutorial/
+
+http://progopedia.com/language/whitespace/
+
+https://github.com/timvandermeij/whitespace-interpreter
